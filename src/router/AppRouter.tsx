@@ -4,7 +4,7 @@ import EventsLayout from "../pages/EventsLayout";
 import NewsLetterLayout from "../pages/NewsLetterLayout";
 import Home from './../pages/Home';
 import Events, { loader as eventsLoader } from './../pages/Events';
-import EventDetails from './../pages/EventDetails';
+import EventDetails, { loader as eventLoader } from './../pages/EventDetails';
 import EventEdit from './../pages/EventEdit';
 import NewsLetters from './../pages/NewsLetters';
 import Error from './../components/Error';
@@ -36,7 +36,7 @@ const AppRouter = createBrowserRouter([
           {
             path: ':eventId',
             element: <EventDetails />,
-            loader: () => {},
+            loader: eventLoader,
           },
           {
             path: 'edit',
