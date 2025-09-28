@@ -4,11 +4,10 @@ import Error from "../components/Error";
 
 export default function EventDetails() {
   const { event } = useLoaderData();
-  console.log(event);
 
   return (
-    <div className="max-w-7xl m-auto">
-      <div className="w-3xl m-auto p-4 shadow-2xl rounded-2xl">
+    <div className="bg-stone-100 max-w-7xl m-auto">
+      <div className="bg-white w-3xl m-auto p-4 shadow-2xl rounded-2xl">
         <h1 className="my-2 text-2xl">{event?.title}</h1>
         <div className="">
           <figure>
@@ -18,8 +17,8 @@ export default function EventDetails() {
         <div className="">
         </div>
       </div>
-      <div className="flex justify-end my-2">
-        <Link to="/events" className="">Go back to Events page.</Link>
+      <div className="flex justify-end py-4">
+        <Link to="/events" className="">&larr; Go back to Events page.</Link>
       </div>
     </div>
   );

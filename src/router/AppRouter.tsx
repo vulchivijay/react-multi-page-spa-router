@@ -8,6 +8,7 @@ import EventDetails, { loader as eventLoader } from './../pages/EventDetails';
 import EventEdit from './../pages/EventEdit';
 import NewsLetters from './../pages/NewsLetters';
 import Error from './../components/Error';
+import NewEvent from "../pages/NewEvent";
 
 const error = {
   status: 404,
@@ -37,6 +38,11 @@ const AppRouter = createBrowserRouter([
             path: ':eventId',
             element: <EventDetails />,
             loader: eventLoader,
+          },
+          {
+            path: 'new',
+            element: <NewEvent />,
+            loader: () => {},
           },
           {
             path: 'edit',
