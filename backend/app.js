@@ -4,6 +4,8 @@ const express = require('express');
 const eventRoutes = require('./routes/events');
 
 const app = express();
+// serving images
+app.use(express.static('images'));
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
